@@ -12,7 +12,14 @@ def load_expenses():
             expenses.append(row)
     return expenses
 
-def write_expense():
+def write_expense(expense):
     with open(DATA_PATH, 'a', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow([4, '2025-07-06', 'Veterinary', 100])
+        writer.writerow(expense)
+
+def write_expenses(expenses):
+    with open(DATA_PATH, 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(['id', 'date', 'description', 'amount'])
+        for expense in expenses:
+            writer.writerow(expense)

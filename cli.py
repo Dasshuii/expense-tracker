@@ -1,7 +1,7 @@
 import argparse
 
-parser = ArgumentParser(
-    prog = 'expense-tracker'
+parser = argparse.ArgumentParser(
+    prog = 'expense-tracker',
     description = 'Keep track of all your expenses!'
 )
 
@@ -10,8 +10,8 @@ subparsers = parser.add_subparsers(dest = 'action', required = True)
 
 # add parser
 parser_add = subparsers.add_parser('add', help = 'Add an expense.')
-parser_add.add_argument('-d', '--description', type = str, help = 'Expense description.')
-parser_add.add_argument('-am', '--amount', type = int, help = 'Expense amount.')
+parser_add.add_argument('-d', '--description', help = 'Expense description.', type = str)
+parser_add.add_argument('-a', '--amount', help = 'Expense amount.', type = int)
 
 # list parser
 parser.add_argument('list', help = 'List all expenses.')

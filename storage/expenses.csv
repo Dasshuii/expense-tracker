@@ -2,7 +2,5 @@ id,date,description,amount
 1,2024-08-06,Lunch,20
 2,2024-08-06,Dinner,10
 3,2025-07-05,Breakfast,40
-5,2025-07-07,PC Gamer,500
 6,2025-07-08,Cinema,20
-7,2025-07-07,Music,15
-8,2025-07-07,VideoGames,80
+7,2025-07-08,Music,20

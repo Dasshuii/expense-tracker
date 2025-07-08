@@ -14,7 +14,7 @@ parser_add.add_argument('-d', '--description', help = 'Expense description.', ty
 parser_add.add_argument('-a', '--amount', help = 'Expense amount.', type = int)
 
 # list parser
-parser.add_argument('list', help = 'List all expenses.')
+parser_list = subparsers.add_parser('list', help = 'List all expenses.')
 
 # Summary parser
 parser_summary = subparsers.add_parser('summary', help = 'Total expenses.')
